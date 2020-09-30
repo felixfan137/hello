@@ -1,13 +1,14 @@
 node{
     stage('Clone') {
       echo "1.Clone Stage"
+      git clone https://github.com/felixfan137/hello.git
     }
     stage('Test') {
       echo "2.Test Stage"
     }
     stage('Build') {
       echo "3.Build Docker Image Stage"
-      sh "mvn clean package"
+      mvn clean package
     }
     stage('Push') {
       echo "4.Push Docker Image Stage"
