@@ -7,6 +7,7 @@ node{
     }
     stage('Build') {
       echo "3.Build Docker Image Stage"
+      mvn package
     }
     stage('Push') {
       echo "4.Push Docker Image Stage"
