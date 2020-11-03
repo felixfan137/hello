@@ -1,4 +1,5 @@
-FROM java:alpine
+FROM java:8
 VOLUME /tmp
-ADD demo-0.0.1-SNAPSHOT.jar app.jar
+ADD target/*.jar app.jar
+EXPOSE 80
 ENTRYPOINT ["java","-jar","/app.jar"]
