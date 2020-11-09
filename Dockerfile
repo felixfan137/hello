@@ -1,5 +1,5 @@
 FROM java:8
 VOLUME /tmp
-ADD target/*.jar app.jar
-EXPOSE 80
-ENTRYPOINT ["java","-jar","/app.jar"]
+ADD hello-0.0.1-SNAPSHOT.jar hello-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "hello-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=dev", "--server.port=8080"]
